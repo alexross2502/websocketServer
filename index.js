@@ -19,23 +19,23 @@ import Users from "./models/Users.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-connectDB();
+// connectDB();
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 
-app.use(cookieParser());
-app.use(express.json());
-app.use("/api", router);
+// app.use(cookieParser());
+// app.use(express.json());
+// app.use("/api", router);
 
-app.use(
-  "/uploads",
-  express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
-);
+// app.use(
+//   "/uploads",
+//   express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
+// );
 
 // const wss = new WebSocketServer({ server });
 // wss.on("connection", async (ws, req) => {
