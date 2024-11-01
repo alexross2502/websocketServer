@@ -6,7 +6,7 @@ const app = express();
 // const server = http.createServer(app);
 // import { WebSocketServer } from "ws";
 // import WebSocket from "ws";
-// import { connectDB } from "./db.js";
+import { connectDB } from "./db.js";
 // import router from "./routes/index.js";
 // import cors from "cors";
 // import cookieParser from "cookie-parser";
@@ -14,12 +14,12 @@ const app = express();
 // import { fileURLToPath } from "url";
 // import { dirname } from "path";
 // import jwt from "jsonwebtoken";
-// import Users from "./models/Users.js";
+import Users from "./models/Users.js";
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = dirname(__filename);
 
-// connectDB();
+connectDB();
 
 // app.use(
 //   cors({
