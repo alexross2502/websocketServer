@@ -11,13 +11,13 @@ import router from "./routes/index.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
+//import { fileURLToPath } from "url";
+//import { dirname } from "path";
 import jwt from "jsonwebtoken";
 import Users from "./models/Users.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = dirname(__filename);
 
 connectDB();
 
