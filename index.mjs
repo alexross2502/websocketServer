@@ -1,11 +1,11 @@
 import express from "express";
-// import http from "http";
+import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
-// const server = http.createServer(app);
-// import { WebSocketServer } from "ws";
-// import WebSocket from "ws";
+const server = http.createServer(app);
+import { WebSocketServer } from "ws";
+import WebSocket from "ws";
 import { connectDB } from "./db.js";
 // import router from "./routes/index.js";
 // import cors from "cors";
@@ -36,7 +36,10 @@ connectDB();
 //   "/uploads",
 //   express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
 // );
-
+const wss = new WebSocketServer({ server });
+wss.on("connection", async (ws, req) => {
+  console.log("dasadasd");
+});
 // const wss = new WebSocketServer({ server });
 // wss.on("connection", async (ws, req) => {
 //   const getTokenFromCookies = (cookieString) => {
