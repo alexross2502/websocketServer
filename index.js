@@ -1,8 +1,8 @@
-import express from "express";
-import http from "http";
-import dotenv from "dotenv";
-dotenv.config();
-const app = express();
+// import express from "express";
+// import http from "http";
+// import dotenv from "dotenv";
+// dotenv.config();
+// const app = express();
 //const server = http.createServer(app);
 // import { WebSocketServer } from "ws";
 // import WebSocket from "ws";
@@ -53,28 +53,29 @@ const app = express();
 //   });
 // });
 
-export const sendMessageToClients = (message) => {
-  console.log("test");
-  // wss.clients.forEach((client) => {
-  //   if (client.readyState === WebSocket.OPEN) {
-  //     console.log("puf");
-  //     const isCurrentUser = client.userLogin.login === message.login;
-  //     client.send(JSON.stringify({ ...message, isCurrentUser }));
-  //   }
-  // });
-};
+// export const sendMessageToClients = (message) => {
+//   console.log("test");
+// wss.clients.forEach((client) => {
+//   if (client.readyState === WebSocket.OPEN) {
+//     console.log("puf");
+//     const isCurrentUser = client.userLogin.login === message.login;
+//     client.send(JSON.stringify({ ...message, isCurrentUser }));
+//   }
+// });
+// };
 
-app.get("/", (req, res) => {
-  res.send("WebSocket-сервер работает!");
-});
+// app.get("/", (req, res) => {
+//   res.send("WebSocket-сервер работает!");
+// });
 
-const PORT = process.env.PORT || 8000;
-const start = async () => {
-  try {
-    app.listen(PORT, () => console.log("start", PORT));
-  } catch (e) {
-    console.log(e);
-  }
-};
+// const PORT = process.env.PORT || 8000;
+// const start = async () => {
+//   try {
+//     app.listen(PORT, () => console.log("start", PORT));
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
 
-start();
+// start();
+console.log("dsaasddas");
