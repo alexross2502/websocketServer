@@ -1,5 +1,5 @@
 import Messages from "../models/Messages.js";
-import { sendMessageToClients } from "../server.js";
+import { sendMessageToClients } from "../index.mjs";
 import Users from "../models/Users.js";
 import jwt from "jsonwebtoken";
 

@@ -7,7 +7,7 @@ const app = express();
 //import { WebSocketServer } from "ws";
 //import WebSocket from "ws";
 import { connectDB } from "./db.js";
-import router from "./routes/index.js";
+//import router from "./routes/index.js";
 import cors from "cors";
 //import cookieParser from "cookie-parser";
 //import path from "path";
@@ -22,10 +22,10 @@ import Users from "./models/Users.js";
 connectDB();
 
 //app.use(
- // cors({
-   // origin: "http://localhost:3000",
-   // credentials: true,
- // })
+// cors({
+// origin: "http://localhost:3000",
+// credentials: true,
+// })
 //);
 
 // app.use(cookieParser());
@@ -38,7 +38,7 @@ connectDB();
 // );
 //const wss = new WebSocketServer({ server });
 //wss.on("connection", async (ws, req) => {
-  //console.log("dasadasd");
+//console.log("dasadasd");
 //});
 // const wss = new WebSocketServer({ server });
 // wss.on("connection", async (ws, req) => {
