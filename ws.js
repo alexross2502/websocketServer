@@ -4,7 +4,7 @@ const server = http.createServer(app);
 
 const wss = new WebSocketServer({ server });
 
-export const sendMessageToClients = (message) => {
+const sendMessageToClients = (message) => {
   console.log("test");
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
