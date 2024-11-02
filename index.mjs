@@ -3,11 +3,7 @@ import express from "express";
 //import dotenv from "dotenv";
 //dotenv.config();
 const app = express();
-import { WebSocketServer } from "ws";
-import WebSocket from "ws";
-const server = http.createServer(app);
 
-const wss = new WebSocketServer({ server });
 //import { connectDB } from "./db.js";
 //import router from "./routes/index.js";
 //import cors from "cors";
@@ -54,17 +50,6 @@ const wss = new WebSocketServer({ server });
 //     //console.log("Клиент отключился");
 //   });
 // });
-
-export default sendMessageToClients = (message) => {
-  console.log("test");
-  wss.clients.forEach((client) => {
-    if (client.readyState === WebSocket.OPEN) {
-      console.log("puf");
-      const isCurrentUser = client.userLogin.login === message.login;
-      client.send(JSON.stringify({ ...message, isCurrentUser }));
-    }
-  });
-};
 
 // export const sendMessageToClients = (message) => {
 //   console.log("test");
