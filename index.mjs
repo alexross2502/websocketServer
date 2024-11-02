@@ -52,7 +52,7 @@ const app = express();
 //     //console.log("Клиент отключился");
 //   });
 // });
-//export const sendMessageToClients = (message) => {};
+export const sendMessageToClients = (message) => {};
 // export const sendMessageToClients = (message) => {
 //   console.log("test");
 //   wss.clients.forEach((client) => {
