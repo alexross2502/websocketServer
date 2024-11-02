@@ -2,17 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "./index.mjs",
-      "use": "@vercel/node",
-      "env": {
-        "NODE_VERSION": "18"
-      }
+      "src": "index.mjs",
+      "use": "@vercel/node"
     }
   ],
+  "env": {
+    "NODE_VERSION": "18"
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "index.mjs"
     }
   ]
 }
