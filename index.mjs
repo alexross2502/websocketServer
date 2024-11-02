@@ -1,5 +1,5 @@
 import express from "express";
-import http from "http";
+//import http from "http";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
@@ -9,11 +9,11 @@ const app = express();
 import { connectDB } from "./db.js";
 import router from "./routes/index.js";
 import cors from "cors";
-import cookieParser from "cookie-parser";
+//import cookieParser from "cookie-parser";
 //import path from "path";
 //import { fileURLToPath } from "url";
 //import { dirname } from "path";
-import jwt from "jsonwebtoken";
+//import jwt from "jsonwebtoken";
 import Users from "./models/Users.js";
 
 //const __filename = fileURLToPath(import.meta.url);
