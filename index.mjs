@@ -8,7 +8,7 @@ const app = express();
 //import WebSocket from "ws";
 //import { connectDB } from "./db.js";
 //import router from "./routes/index.js";
-import cors from "cors";
+//import cors from "cors";
 //import cookieParser from "cookie-parser";
 //import path from "path";
 //import { fileURLToPath } from "url";
@@ -52,7 +52,7 @@ import cors from "cors";
 //     //console.log("Клиент отключился");
 //   });
 // });
-export const sendMessageToClients = (message) => {};
+//export const sendMessageToClients = (message) => {};
 // export const sendMessageToClients = (message) => {
 //   console.log("test");
 //   wss.clients.forEach((client) => {
