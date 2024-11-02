@@ -1,34 +1,34 @@
 import express from "express";
-//import http from "http";
-//import dotenv from "dotenv";
-//dotenv.config();
+import http from "http";
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
 
-//import { connectDB } from "./db.js";
-//import router from "./routes/index.js";
-//import cors from "cors";
-//import cookieParser from "cookie-parser";
-//import path from "path";
-//import { fileURLToPath } from "url";
-//import { dirname } from "path";
-//import jwt from "jsonwebtoken";
-//import Users from "./models/Users.js";
+import { connectDB } from "./db.js";
+import router from "./routes/index.js";
+import cors from "cors";
+import cookieParser from "cookie-parser";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import jwt from "jsonwebtoken";
+import Users from "./models/Users.js";
 
-//const __filename = fileURLToPath(import.meta.url);
-//const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-//connectDB();
+connectDB();
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
 
-//app.use(cookieParser());
-//app.use(express.json());
-//app.use("/api", router);
+app.use(cookieParser());
+app.use(express.json());
+app.use("/api", router);
 
 //app.use(
 //"/uploads",
