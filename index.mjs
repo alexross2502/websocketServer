@@ -21,20 +21,20 @@ import cors from "cors";
 
 //connectDB();
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 
 //app.use(cookieParser());
 //app.use(express.json());
 //app.use("/api", router);
 
 //app.use(
- //"/uploads",
- // express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
+//"/uploads",
+// express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
 //);
 
 // const wss = new WebSocketServer({ server });
