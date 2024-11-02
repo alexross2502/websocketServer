@@ -1,5 +1,5 @@
 import Messages from "../models/Messages.js";
-import { sendMessageToClients } from "../index.mjs";
+//import { sendMessageToClients } from "../index.mjs";
 import Users from "../models/Users.js";
 import jwt from "jsonwebtoken";
 
@@ -55,7 +55,7 @@ export async function postMessage(req, res) {
     //console.log(req.user);
     //console.log(newMessage.user);
 
-    sendMessageToClients(formattedMessage);
+    //sendMessageToClients(formattedMessage);
 
     res.status(201).json(newMessage);
   } catch (error) {
