@@ -37,32 +37,32 @@ app.use(
   express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
 );
 
-const wss = new WebSocketServer({ server });
-wss.on("connection", async (ws, req) => {
-  const getTokenFromCookies = (cookieString) => {
-    const match = cookieString.match(/(?:^|;\s*)token=([^;]*)/);
-    return match ? decodeURIComponent(match[1]) : null;
-  };
-  const token = getTokenFromCookies(req.headers.cookie);
-  const decoded = jwt.verify(token, process.env.JWT_SECRET);
-  const userLogin = await Users.findById(decoded.id).select("login");
+// const wss = new WebSocketServer({ server });
+// wss.on("connection", async (ws, req) => {
+//   const getTokenFromCookies = (cookieString) => {
+//     const match = cookieString.match(/(?:^|;\s*)token=([^;]*)/);
+//     return match ? decodeURIComponent(match[1]) : null;
+//   };
+//   const token = getTokenFromCookies(req.headers.cookie);
+//   const decoded = jwt.verify(token, process.env.JWT_SECRET);
+//   const userLogin = await Users.findById(decoded.id).select("login");
 
-  ws.userLogin = userLogin;
-  ws.on("close", () => {
-    //console.log("Клиент отключился");
-  });
-});
-
-export const sendMessageToClients = (message) => {
-  console.log("test");
-  wss.clients.forEach((client) => {
-    if (client.readyState === WebSocket.OPEN) {
-      console.log("puf");
-      const isCurrentUser = client.userLogin.login === message.login;
-      client.send(JSON.stringify({ ...message, isCurrentUser }));
-    }
-  });
-};
+//   ws.userLogin = userLogin;
+//   ws.on("close", () => {
+//     //console.log("Клиент отключился");
+//   });
+// });
+export const sendMessageToClients = (message) => {};
+// export const sendMessageToClients = (message) => {
+//   console.log("test");
+//   wss.clients.forEach((client) => {
+//     if (client.readyState === WebSocket.OPEN) {
+//       console.log("puf");
+//       const isCurrentUser = client.userLogin.login === message.login;
+//       client.send(JSON.stringify({ ...message, isCurrentUser }));
+//     }
+//   });
+// };
 
 app.get("/", (req, res) => {
   res.send("WebSocket-сервер работает!");
