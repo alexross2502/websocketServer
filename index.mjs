@@ -3,9 +3,7 @@ import express from "express";
 //import dotenv from "dotenv";
 //dotenv.config();
 const app = express();
-//const server = http.createServer(app);
-//import { WebSocketServer } from "ws";
-//import WebSocket from "ws";
+
 //import { connectDB } from "./db.js";
 //import router from "./routes/index.js";
 //import cors from "cors";
@@ -38,7 +36,7 @@ import { sendMessageToClients } from "./ws.js";
 // express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
 //);
 
-// const wss = new WebSocketServer({ server });
+//
 // wss.on("connection", async (ws, req) => {
 //   const getTokenFromCookies = (cookieString) => {
 //     const match = cookieString.match(/(?:^|;\s*)token=([^;]*)/);

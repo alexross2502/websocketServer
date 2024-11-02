@@ -1,3 +1,9 @@
+import { WebSocketServer } from "ws";
+import WebSocket from "ws";
+const server = http.createServer(app);
+
+const wss = new WebSocketServer({ server });
+
 export const sendMessageToClients = (message) => {
   console.log("test");
   wss.clients.forEach((client) => {
