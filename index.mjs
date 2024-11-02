@@ -36,10 +36,10 @@ connectDB();
 //   "/uploads",
 //   express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
 // );
-const wss = new WebSocketServer({ server });
-wss.on("connection", async (ws, req) => {
-  console.log("dasadasd");
-});
+//const wss = new WebSocketServer({ server });
+//wss.on("connection", async (ws, req) => {
+  //console.log("dasadasd");
+//});
 // const wss = new WebSocketServer({ server });
 // wss.on("connection", async (ws, req) => {
 //   const getTokenFromCookies = (cookieString) => {
