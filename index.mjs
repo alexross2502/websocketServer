@@ -10,14 +10,14 @@ import { connectDB } from "./db.js";
 import router from "./routes/index.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
+//import path from "path";
+//import { fileURLToPath } from "url";
+//import { dirname } from "path";
 import jwt from "jsonwebtoken";
 import Users from "./models/Users.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = dirname(__filename);
 
 connectDB();
 
@@ -28,14 +28,14 @@ app.use(
   })
 );
 
-app.use(cookieParser());
-app.use(express.json());
+//app.use(cookieParser());
+//app.use(express.json());
 app.use("/api", router);
 
-app.use(
-  "/uploads",
-  express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
-);
+//app.use(
+ //"/uploads",
+ // express.static(path.join(__dirname.replace(/^\/|\/$/g, ""), "uploads"))
+//);
 
 // const wss = new WebSocketServer({ server });
 // wss.on("connection", async (ws, req) => {
