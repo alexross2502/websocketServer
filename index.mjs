@@ -53,7 +53,7 @@ import { sendMessageToClients } from "./ws.js";
 //     //console.log("Клиент отключился");
 //   });
 // });
-const sendMessageToClients = (message) => {};
+
 // export const sendMessageToClients = (message) => {
 //   console.log("test");
 //   wss.clients.forEach((client) => {
